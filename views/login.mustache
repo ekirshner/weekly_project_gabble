@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Login</title>
+        <link rel="stylesheet" href="/styles.css">
+        <style>@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two');</style>
+    </head>
+
+    <body>
+        <header>
+            <h1>Welcome to <span class="welcome">Gabble</span></h1>
+        </header>
+
+        <h1>Please Sign In</h1>
+        
+        <form method="post" action="/loginVerification">
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" maxlength="20">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" maxlength="10">
+            <input type="submit" value="Sign In" class="button">
+        </form>
+
+        <form method="get" action="/registration" id="regform">
+            <label for="reghere">New User?</label>
+            <input type="submit" value="Sign Up" name="reghere" class="button">
+        </form>
+
+    </body>
+</html>

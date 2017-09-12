@@ -1,0 +1,109 @@
+body {
+    font-family: sans-serif;
+}
+
+header {
+    background-color: hotpink;
+    height: 100px;
+    padding-left: 1%;
+}
+
+.welcome {
+    font-family: 'Shadows Into Light Two', cursive;
+    font-size: 60px;
+    color: black;
+}
+
+#signout {
+    float: right;
+    position: relative;
+    bottom: 100px;
+    margin-right: 1%;
+}
+
+#add-gab,
+.gabs {
+    border-bottom: 1px dashed darkslategray;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#add-gab {
+    padding-top:35px;
+    padding: 35px 0;
+}
+
+#gabbox {
+    width: 300px;
+    width: 500px;
+} 
+
+#regform {
+    margin-top: 1%;
+} 
+
+.liked,
+header input,
+#like-and-delete input, 
+.button {
+    background-color: hotpink;
+    border-radius: 5px;
+    border: none;
+    width: 75px;
+    height: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.liked,
+header input,
+#like-and-delete input,
+.button:focus {
+    outline: none;
+    border: none;
+}
+
+
+ #like-and-delete { 
+    display: flex; 
+    float: right;   
+    margin: 0 4%;    
+    width: 180px; 
+    justify-content: space-between; 
+    position: relative;
+    bottom: 92px; 
+    opacity: .95;
+}
+
+span {
+    font-family: 'Shadows Into Light Two', cursive;
+    color: hotpink;
+    font-size: 15px;
+}
+
+header input {
+    color: hotpink; 
+    background-color: white;
+}
+
+.message-content {
+    width: 70%;
+    height: 100px;
+    font-size: 13px; 
+}
+
+.message-content p:nth-child(2){
+    color: grey;
+}
+
+a {
+    color: hotpink; 
+    text-decoration: none;
+}
+
+ .liked {
+    background-color: pink;
+}
+
+#gab-likes {
+    height: 79px;
+}

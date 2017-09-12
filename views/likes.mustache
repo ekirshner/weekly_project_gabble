@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Welcome to Gabble</title>
+        <link rel="stylesheet" href="/styles.css">
+        <style>@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two');</style>
+    </head>
+
+    <body>
+        <header>
+            <h1>Welcome to <span class="welcome">Gabble</span></h1>
+    
+            <form method="post" action="/signout">
+                <input type="submit" value="Sign Out" id="signout">
+            </form>
+        </header>
+
+        <section id="the-gabs2"> 
+            <div class="gabs" id="gab-likes">
+                <div class="message-content">
+                    <p><span>{{ display_name }} says: </span>"{{ text }}" </p> 
+                    <p>{{ createdAt }}</p> 
+                </div>
+
+                <a href='/likes/:id'>Liked By</a> 
+                {{ #pants }} <p>{{user.display_name}}</p>{{ /pants}}
+            </div>   
+        </section>
+    </body>
+</html>

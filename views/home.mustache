@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Welcome to Gabble</title>
+        <link rel="stylesheet" href="/styles.css">
+        <style>@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two');</style>
+    </head>
+
+    <body>
+        <header>
+            <h1>Welcome to <span class="welcome">Gabble</span></h1>
+    
+            <form method="post" action="/signout">
+                <input type="submit" value="Sign Out" id="signout">
+            </form>
+        </header>
+
+        <form method="post" action="/add" id="add-gab">
+            <input type="text" maxlength="140" name="gabbox" id="gabbox" placeholder="Add New Gab..">
+            <input type="submit" value="Add Gab" id="submit-gab" class="button">
+        </form>
+
+        <section id="the-gabs">
+            {{ #messages }}
+                <div class="gabs">
+                    <div class="message-content">
+                        <p><span>{{ user.display_name }} says: </span>"{{ text }}"</p>
+                        <p>{{ createdAt }}</p>
+                        <a href='/likes/{{ id }}'>Likes {{ likeCount }} </a>
+                    </div>
+
+                    <div id="like-and-delete">
+                        {{ #likable }}
+                        <form method="post" action="/newLike/{{ id }}">
+                            <input type="submit" value="Like">
+                        </form>
+                        {{ /likable }}
+                        {{ ^likable }} 
+                            <button class="liked">Liked</button>
+                        {{/likable}}
+
+                        {{ #deletable }}
+                        <form method="post" action="/deleteMessage/{{ id }}">
+                            <input type="submit" value="Delete">
+                        </form>
+                        {{ /deletable }}
+                        {{ ^deletable }} {{/deletable}}
+                    </div>
+                </div>
+            {{ /messages }}
+        </section>
+    </body>
+</html>
